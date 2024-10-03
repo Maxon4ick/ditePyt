@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b59d458-6ddb-48be-96f2-95a2f32922b9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/managers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/0002_user_cart.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/0003_remove_user_cart.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/0004_user_likes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/edit_profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/email_template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/manager_login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/password_reset.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/password_reset_complete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/password_reset_confirm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/password_reset_done.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/templates/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/utils/cart.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/add_category.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/add_product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/edit_product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/order_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/orders.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/lfxypx7-540x500.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/online_shop/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/online_shop/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/online_shop/context_processors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/online_shop/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/online_shop/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/online_shop/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/templates/checkout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/templates/user_orders.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0002_alter_product_slug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0003_alter_product_options_remove_product_category_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0004_alter_product_slug_alter_product_title.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0005_alter_product_slug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0006_alter_category_options_alter_product_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0007_alter_category_options.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/templates/favorites.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/templates/home_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/templates/product_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/views.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2mwVlsBOP3JvCOcNcKVZgnLXEWy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "C:/Users/user/Documents/work/pythonModel/localSIte"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b59d458-6ddb-48be-96f2-95a2f32922b9" name="Changes" comment="" />
+      <created>1727987779919</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727987779919</updated>
+    </task>
+    <servers />
+  </component>
+</project>
