@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'checkout.apps.CheckoutConfig',
     'users.apps.UsersConfig',
+    'news.apps.NewsConfig',
     'taggit',
 ]
 
