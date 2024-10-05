@@ -14,8 +14,6 @@
         {% else %}
             <img src="{% static "images/pic01.jpg" %}" alt="" />
         {% endif %}
-        <a href="{% url 'cart:add_to_cart' item.slug %}" class="button small" style="margin-top:10px;">
-            Добавить в корзину</a>
         </span>
     </p>
     <p>{{ item.description }}</p>

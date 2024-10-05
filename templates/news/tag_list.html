@@ -2,7 +2,7 @@
 
 {% block content %}
 {% load static %}
-    <h2>Список всех категорий</h2>
+    <h2>Список всех категорий новостей</h2>
     <hr>
 {% for tag in page_obj %}
     <a href="{% url 'news:news_tag_details' tag.slug %}"><b>{{ tag.name }}</b></a>
