@@ -19,12 +19,6 @@
         </span>
     </p>
     <p>{{ item.description }}</p>
-    {% if item.old_price %}
-        <p>Старая цена: <s>{{ item.old_price }} рублей</s>
-        Новая цена: <b>{{ item.price }}</b> рублей </p>
-    {% else %}
-        <p>Цена: <b>{{ item.price }}</b> рублей </p>
-    {% endif %}
     {% if not forloop.last %}<hr>{% endif %}
 {% endfor %}
 {% endblock %} 

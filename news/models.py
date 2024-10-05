@@ -37,18 +37,6 @@ class NewsItem(models.Model):
         max_length=50,
     )
     pub_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата добавления',)
-    priceNew = models.DecimalField(
-        max_digits=8,
-        decimal_places=2,
-        verbose_name='Новая цена',
-    )
-    old_priceNew = models.DecimalField(
-        max_digits=8,
-        decimal_places=2,
-        verbose_name='Старая цена',
-        blank=True,
-        null=True,
-    )
     image = models.ImageField(
         verbose_name='Изображение',
         upload_to='items/',
@@ -64,6 +52,5 @@ class NewsItem(models.Model):
         return self.title
 
     class Meta:
-        ordering = ['-priceNew']
-        verbose_name = 'Товар'
-        verbose_name_plural = 'Товары'
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'

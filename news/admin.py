@@ -4,8 +4,8 @@ from .models import NewsItem, NewsItemTag
 
 
 class NewsItemAdmin(admin.ModelAdmin):
-    list_display = ('title', 'short_description', 'slug', 'priceNew',
-                    'old_priceNew', 'is_available', 'tag_list',)
+    list_display = ('title', 'short_description', 'slug',
+                    'is_available', 'tag_list',)
     search_fields = ('title', 'description', 'tags__name',)
     list_filter = ('is_available', 'tags',)
 
@@ -21,7 +21,7 @@ class NewsItemAdmin(admin.ModelAdmin):
     def tag_list(self, obj):
         return u", ".join(o.name for o in obj.tags.all())
 
-    short_description.short_description = 'Описание'
+    short_description.short_description = 'Описание Новости'
     tag_list.short_description = 'Список категорий Новостей'
 
 
