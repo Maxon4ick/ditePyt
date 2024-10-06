@@ -5,13 +5,18 @@ from .paginator import paginator
 
 
 def store(request):
-    items = Item.objects.filter(is_available=True)
+    # items = Item.objects.filter(is_available=True)
+    # context = {
+    #     'page_obj': paginator(request, items, 9),
+    #     'range': [*range(1, 7)],  # For random css styles
+    # }
+    #
+    # return render(request, 'store/main_page.html', context)
+    tags = ItemTag.objects.all()
     context = {
-        'page_obj': paginator(request, items, 9),
-        'range': [*range(1, 7)],  # For random css styles
+        'page_obj': paginator(request, tags, 6),
     }
-
-    return render(request, 'store/main_page.html', context)
+    return render(request, 'store/tag_list.html', context)
 
 
 def item_details(request, item_slug):
