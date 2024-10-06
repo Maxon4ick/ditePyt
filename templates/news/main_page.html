@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<h1>Новости из мира метрологии и не только<br /></h1>
+<p>В данном разделе Вы можете получить актуальную информацию об обновлениях мира метрологии, аккредитации, системы менеджмента качества,
+которые могут быть актуальными для вашей организации. А если вам необходимо <a href="{% url 'store:tag_details' 'huys' %}">оборудование</a> или
+    <a href="{% url 'store:tag_details' 'huys' %}">адаптация</a> документации под новые требования - пишите нам.</p>
+<section class="tiles">
+    {% for item in page_obj %}
+    <article class="style{{ range|random }}">
+        <span class="image">
+        {% if item.image %}
+            <img src="{{ item.image.url }}" alt="" style="width: 353px; height: 326px;" />
+        {% else %}
+            <img src="{% static "images/pic01.jpg" %}" alt="" />
+        {% endif %}
+        </span>
+        <a href="{% url 'news:news_item_details' item.slug %}">
+            <div class="tag">
+                <object> 
+                    {% for tag in item.tags.all %}
+                        <a href="{% url 'news:news_tag_details' tag.slug %}" style="color: white">{{ tag }}</a>
+                        {% if not forloop.last %},{% endif %}
+                    {% endfor %}
+                </object><br />
+            </div>
+            <h2>{{ item.title }}</h2>
+            <div class="content">
+                <p>{{ item.description|truncatechars:150 }}</p>
+            </div>
+        </a>
+    </article>
+    {% endfor %}
+</section>
+{% endblock %} 

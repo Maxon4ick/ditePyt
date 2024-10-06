@@ -1,0 +1,42 @@
+{% load static %}
+<header id="header">
+    <div class="inner">
+        <!-- Logo -->
+        <a href="{% url 'store:home' %}" class="logo">
+            <span class="symbol"><img src="{% static "images/logo.svg" %}" alt="" /></span><span class="title">СОВИЗМ</span>
+        </a>
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+            <br>
+            <ul class="actions">
+                <li>
+                    <a href="{% url 'store:tag_list' %}">
+                    <img src ="{% static "images/shop.png" %}" width="40" height="40" ></a>
+                    <br>
+                    <a href="{% url 'cart:cart' %}">
+                    <img src ="{% static "images/cart.jpg" %}" width="40" height="40" ></a>
+                    <br>
+                    <a href="{% url 'users:profile' %}">
+                    <img src ="{% static "images/profile.png" %}" width="40" height="40" ></a>
+                    <br>
+                     <a href="{% url 'news:news' %}">
+                    <img src ="{% static "images/news.png" %}" width="40" height="40" ></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- Menu -->
+<nav id="menu">
+    <h2>Меню</h2>
+    <ul>
+        <li><a href="{% url 'store:tag_list' %}">Все категории товаров и услуг</a></li>
+        <li><a href="{% url 'news:news_tag_list' %}">Все категории новостей</a></li>
+        <li><a href="{% url 'cart:cart' %}">Корзина</a></li>
+        <li><a href="{% url 'users:profile' %}">Мой профиль</a></li>
+        <li><a href="{% url 'about:about_me' %}">О нас</a></li>
+    </ul>
+</nav>
