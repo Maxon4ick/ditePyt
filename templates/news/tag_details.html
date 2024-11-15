@@ -3,7 +3,7 @@
 {% block content %}
 {% load static %}
     <h2>{{ tag.name }}</h2>
-    Количество товаров:&ensp;{{ tag.items.count }}
+    Количество новостей:&ensp;{{ tag.items.count }}
     <p><a href="{% url 'news:news_tag_list'%}"><b>Все категории</b></a></p>
     <hr>
 {% for item in page_obj %}
@@ -16,7 +16,9 @@
         {% endif %}
         </span>
     </p>
-    <p>{{ item.description }}</p>
+<div class="content">
+    <p>{{ item.description|truncatechars:250 }}</p>
+</div>
     {% if not forloop.last %}<hr>{% endif %}
 {% endfor %}
 {% endblock %} 

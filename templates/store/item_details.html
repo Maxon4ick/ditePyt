@@ -10,19 +10,19 @@
 {% endfor %}
 </p>
 {% if item.image %}
-    <p><span class="image left"><img src="{{ item.image.url }}" alt="" style="max-width: 200px; max-height: 200px;"/>
+    <p><span class="image left"><img src="{{ item.image.url }}" alt="" style="width: 250px; height: 250px;"/>
 {% else %}
-    <p><span class="image left"><img src="{% static "images/pic14.jpg" %}" alt="" />
+    <p><span class="image left"><img src="{% static "images/pic14.jpg" %}" alt="" style="width: 250px; height: 250px;"/>
 {% endif %}
     <a href="{% url 'cart:add_to_cart' item.slug %}" class="button small" style="margin-top:10px;">
         Добавить в корзину</a>
     </span>
-    {{ item.description }}{{ item.description }}
-</p>
-{% if item.old_price %}
+        {% if item.old_price %}
     <p>Старая цена: <s>{{ item.old_price }} рублей</s>
     Новая цена: <b>{{ item.price }}</b> рублей </p>
 {% else %}
     <p>Цена: <b>{{ item.price }}</b> рублей </p>
-{% endif %}
+    </span>{% endif %}
+    {{ item.description }}
+</p>
 {% endblock %} 

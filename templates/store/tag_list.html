@@ -8,17 +8,27 @@
 <p>Вы можете ознакомиться с каталогом оборудования, которое мы можем Вам поставить в кратчайшие сроки и по приятной цене, а также услугами, оказываемыми нашими специалистами
     или просто оставьте заявку любым удобным способом. Наши сотрудники Вас проконсультируют в ближайшее время! </p>
 
-    <h2>Мы можем предложить</h2>
-    <hr>
+<h2>Мы можем предложить</h2>
+<hr>
 {% for tag in page_obj %}
+    <div style="display:flex; flex-direction: row; justify-content: space-between">
+<div>
+    <p>
     <a href="{% url 'store:tag_details' tag.slug %}"><b>{{ tag.name }}</b></a>
-    <p><span class="image right">
-        {% if tag.image %}
-            <img src="{{ tag.image.url }}" alt="" style="width: 200px; height: 200px;"/>
-        {% else %}
-            <img src="{% static "images/pic14.jpg" %}" alt="" />
-        {% endif %}
-    </span>{{tag.description}}{{tag.description}}</p>
-    {% if not forloop.last %}<hr>{% endif %}
+</p>
+<p>
+    <span>{{tag.description|truncatechars:1150}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur cumque facilis inventore, nesciunt omnis repellat totam. Aspernatur cumque</span>
+</p>
+</div>
+
+
+{% if tag.image %}
+    <img class="image right" src="{{ tag.image.url }}" alt="" style="object-fit: cover; width:200px; heigth:200px" />
+{% else %}
+    <img src="{% static "images/pic14.jpg" %}" alt="" style="object-fit: cover;width:200px; heigth:200px" />
+{% endif %}
+<!--{{tag.description}}{{tag.description}}-->
+{% if not forloop.last %}<hr>{% endif %}
+</div>
 {% endfor %}
-{% endblock %} 
+{% endblock %}
