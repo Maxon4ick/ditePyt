@@ -15,15 +15,15 @@
     <a href="{% url 'store:item_details' item.slug %}"><b>{{item.title}}</b></a>
 </p>
 <p>
-    <span>{{ item.description|truncatechars:250 }}</span>
+    <span>{{ item.description|truncatechars:300 }}</span>
 </p>
 </div>
 
 
 {% if tag.image %}
-    <img class="image right" src="{{ tag.image.url }}" alt="" style="object-fit: cover; width:200px; heigth:200px" />
+    <img class="image right" src="{{ tag.image.url }}" alt="" style="object-fit: cover; width:350px; heigth:350px" />
 {% else %}
-    <img src="{% static "images/pic14.jpg" %}" alt="" style="object-fit: cover;width:200px; heigth:200px" />
+    <img src="{% static "images/pic14.jpg" %}" alt="" style="object-fit: cover;width:350px; heigth:350px" />
 {% endif %}
 </div>
         <a href="{% url 'cart:add_to_cart' item.slug %}" class="button small" style="margin-top:10px;">

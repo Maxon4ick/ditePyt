@@ -6,19 +6,27 @@
     Количество новостей:&ensp;{{ tag.items.count }}
     <p><a href="{% url 'news:news_tag_list'%}"><b>Все категории</b></a></p>
     <hr>
+
 {% for item in page_obj %}
-    <a href="{% url 'news:news_item_details' item.slug %}"><b>{{ item.title }}</b></a>
-    <p><span class="image left">
-        {% if item.image %}
-            <img src="{{ item.image.url }}" alt="" style="max-width: 200px; max-height: 200px;"/>
-        {% else %}
-            <img src="{% static "images/pic01.jpg" %}" alt="" />
-        {% endif %}
-        </span>
-    </p>
-<div class="content">
-    <p>{{ item.description|truncatechars:250 }}</p>
+
+    <div style="display:flex; flex-direction: row; justify-content: space-between">
+<div>
+    <p>
+    <a href="{% url 'news:news_item_details' item.slug %}"><b>{{item.title}}</b></a>
+</p>
+<p>
+    <span>{{ item.description|truncatechars:300 }}</span>
+</p>
 </div>
-    {% if not forloop.last %}<hr>{% endif %}
+
+
+{% if tag.image %}
+    <img class="image right" src="{{ tag.image.url }}" alt="" style="object-fit: cover; width:350px; heigth:350px" />
+{% else %}
+    <img src="{% static "images/pic14.jpg" %}" alt="" style="object-fit: cover;width:350px; heigth:350px" />
+{% endif %}
+</div>
+{% if not forloop.last %}<hr>{% endif %}
+
 {% endfor %}
-{% endblock %} 
+{% endblock %}

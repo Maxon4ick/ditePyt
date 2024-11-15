@@ -9,23 +9,24 @@
     или просто оставьте заявку любым удобным способом. Наши сотрудники Вас проконсультируют в ближайшее время! </p>
 
 <h2>Мы можем предложить</h2>
-<hr>
+<!--<hr>-->
 {% for tag in page_obj %}
+    <hr>
     <div style="display:flex; flex-direction: row; justify-content: space-between">
 <div>
     <p>
     <a href="{% url 'store:tag_details' tag.slug %}"><b>{{ tag.name }}</b></a>
 </p>
 <p>
-    <span>{{tag.description|truncatechars:1150}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur cumque facilis inventore, nesciunt omnis repellat totam. Aspernatur cumque</span>
+    <span>{{tag.description|truncatechars:300}}</span><span></span>
 </p>
 </div>
 
 
 {% if tag.image %}
-    <img class="image right" src="{{ tag.image.url }}" alt="" style="object-fit: cover; width:200px; heigth:200px" />
+    <img class="image right" src="{{ tag.image.url }}" alt="" style="object-fit: cover; width:350px; heigth:350px" />
 {% else %}
-    <img src="{% static "images/pic14.jpg" %}" alt="" style="object-fit: cover;width:200px; heigth:200px" />
+    <img src="{% static "images/pic14.jpg" %}" alt="" style="object-fit: cover;width:350px; heigth:350px" />
 {% endif %}
 <!--{{tag.description}}{{tag.description}}-->
 {% if not forloop.last %}<hr>{% endif %}

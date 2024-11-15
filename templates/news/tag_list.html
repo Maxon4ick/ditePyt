@@ -11,19 +11,18 @@
 <a href="{% url 'news:news_tag_details' tag.slug %}"><b>{{ tag.name }}</b></a>
 </p>
 <p>
-<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur cumque facilis inventore, nesciunt omnis repellat totam. Aspernatur cumque dolorum, eos esse laudantium molestias mollitia natus, nihil provident, totam voluptas!</span><span>Adipisci alias, consequatur cum dolorum esse illo in quas voluptatem? Aliquam aperiam autem consequatur consequuntur cum, dolorem, ea earum exercitationem non ratione rem repellat sit vitae voluptatem, voluptatum. Modi, praesentium?</span>
+<span>{{tag.description|truncatechars:300}}</span><span></span>
 </p>
 </div>
 
 
 {% if tag.image %}
-<img class="image right" src="{{ tag.image.url }}" alt="" style="object-fit: cover; width:100%; heigth:250px" />
+<img class="image right" src="{{ tag.image.url }}" alt="" style="object-fit: cover; width:350px; heigth:350px" />
 {% else %}
-<img src="{% static "images/pic14.jpg" %}" alt="" style="object-fit: cover; width:100%; heigth:250px" />
+<img src="{% static "images/pic14.jpg" %}" alt="" style="object-fit: cover;  width:450px; heigth:450px" />
 {% endif %}
-{{tag.description}}{{tag.description}}
 {% if not forloop.last %}<hr>{% endif %}
 </div>
 
 {% endfor %}
-{% endblock %} .
+{% endblock %}

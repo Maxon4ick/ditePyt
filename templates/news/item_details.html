@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 
 {% block content %}
@@ -10,11 +11,12 @@
 {% endfor %}
 </p>
 {% if item.image %}
-    <p><span class="image left"><img src="{{ item.image.url }}" alt="" style="max-width: 200px; max-height: 200px;"/>
+    <p><span class="image left"><img src="{{ item.image.url }}" alt="" style="width: 250px; height: 250px;"/>
 {% else %}
-    <p><span class="image left"><img src="{% static "images/pic14.jpg" %}" alt="" />
+    <p><span class="image left"><img src="{% static "images/pic14.jpg" %}" alt="" style="width: 250px; height: 250px;"/>
 {% endif %}
+    </span></p>
+    {{ item.description }}
+<hr>
     </span>
-    {{ item.description }}{{ item.description }}
-</p>
-{% endblock %} 
+{% endblock %}
