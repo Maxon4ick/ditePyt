@@ -141,5 +141,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 
 # Telegram
-TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
-TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
+TELEGRAM_TOKEN = '7224572753:AAG3rtGQ4tFWNNIyZx-Af2XE5AJm6bTWESM'
+TELEGRAM_CHAT_ID = '884955312'

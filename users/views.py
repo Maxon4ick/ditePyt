@@ -62,7 +62,7 @@ def feedback_processing(request):
             feedback.save()
 
             # Отпрака сообщения
-            message = f"Новое сообщение от {feedback.feedback_name} ({feedback.feedback_email}): {feedback.feedback_message}"
+            message = f"Обратная связь от {feedback.feedback_name} ({feedback.feedback_email}):\n {feedback.feedback_message}"
             asyncio.run(send_telegram_message(message))
 
             return render(request, 'users/feedback_success.html')

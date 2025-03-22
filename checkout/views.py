@@ -1,7 +1,11 @@
+import asyncio
+
+import telegram
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
 
+from OnlineStore.settings import TELEGRAM_CHAT_ID, TELEGRAM_TOKEN
 from cart.views import Cart
 from .forms import OrderCreateForm
 from .models import Order, OrderItem, ShippingAddress
@@ -19,12 +23,31 @@ def checkout(request):
     return render(request, 'checkout/checkout.html', context)
 
 
+async def send_telegram_message(message):
+    """
+    Асинхронная функция для отправки сообщения в ТГ.
+    """
+    bot = telegram.Bot(token=TELEGRAM_TOKEN)
+    chat_id = TELEGRAM_CHAT_ID
+    await bot.send_message(chat_id=chat_id, text=message)
+
+
+
 @login_required
 def thank_you(request, order_id):
     """
     Страница благодарности за заказ.
     """
     order = get_object_or_404(Order, id=order_id, user=request.user)
+
+    # Отравка в TG уведомления о заказе
+    # Отпрака сообщения
+    message = f" Новый заказ \nСостав заказа \n"
+    for item in order.items.all():
+        message += f"{item.quantity} x {item.item.title}\n"
+    message += f"Привезти по адресу:\n{order.shipping_address}\n"
+    asyncio.run(send_telegram_message(message))
+
     return render(request, 'checkout/thank_you.html', {'order': order})
 
 
